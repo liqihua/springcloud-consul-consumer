@@ -1,0 +1,11 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: springcloud-consul-consumer #应用名称
+  cloud:
+    consul:
+      host: 192.168.1.101 #consul 地址（client模式）
+      port: 8500 #consul 端口
+      discovery:
+        register: false #消费者只需要去consul调用服务，本身不需要提供服务，所以告诉consul不用把自己注册进去
